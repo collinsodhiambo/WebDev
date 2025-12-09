@@ -1,0 +1,123 @@
+/* GLOBAL RESET & BOX MODEL */
+* {
+    box-sizing: border-box; /* Ensures padding doesn't break layout width */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Lecture 5 Slide 42 [cite: 558] */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* HEADER SECTION */
+header {
+    background-color: #003366; /* Dark Blue */
+    color: #ffffff;
+    padding: 20px;
+    border-bottom: 5px solid #e8491d; /* Orange border for contrast  */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: #333;
+    overflow: hidden; /* Clears floats inside nav */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block; /* Horizontal list layout */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #e8491d;
+    color: white;
+}
+
+/* PAGE LAYOUT CONTAINERS [cite: 150] */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Clears floats */
+    background-color: #fff;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    min-height: 600px;
+}
+
+/* FLOAT LAYOUT (Lecture 7) */
+.main-content {
+    float: left;
+    width: 70%; /* Takes up 70% of the container */
+    padding-right: 20px;
+}
+
+.sidebar {
+    float: right;
+    width: 30%; /* Takes up 30% of the container */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* IMAGES */
+img.float-left {
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    padding: 5px; /* Box model spacing  */
+}
+
+img.float-right {
+    float: right;
+    margin-left: 15px;
+}
+
+/* FORMS (Lecture 4, Slide 26)  */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    clear: both; /* Ensures footer sits below floated elements */
+}
